@@ -74,9 +74,9 @@ Build a two-sided rehabilitation platform connecting ankle biomechanics monitori
 5. Configure Python dependency management, Ruff, type checking where practical, pytest, frontend linting, formatting, TypeScript strict mode, and Vitest.-
 6. Add `.env.example`, secret-handling guidance, local database configuration, and a single documented developer bootstrap command or script.-
 7. Add GitHub Actions for lint, type checks, backend tests, frontend tests, and production builds on pull requests.-
-8. Define consistent API response/error formats, logging conventions, UTC timestamp policy, and API versioning (`/api/v1`).
-9. Set up Docker Compose for local PostgreSQL (and optional API) without requiring containers for every frontend edit.
-10. Create a project README with architecture diagram, setup instructions, scripts, and explicit demo/nonclinical status.
+8. Define consistent API response/error formats, logging conventions, UTC timestamp policy, and API versioning (`/api/v1`).-
+9. Set up Docker Compose for local PostgreSQL (and optional API) without requiring containers for every frontend edit.-
+10. Create a project README with architecture diagram, setup instructions, scripts, and explicit demo/nonclinical status.-
 
 **Acceptance gate:** A fresh clone boots frontend, backend, and database using documented commands; CI passes; no legacy dependency or local machine path is required.
 

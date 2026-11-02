@@ -22,9 +22,11 @@ Never place real patient data, production credentials, or tokens in this repo or
 secrets through the deployment platform's secret manager. Rotate any secret that
 is accidentally committed.
 
-The API reads `DATABASE_URL`, but does not yet create tables or query the database;
-schema and migrations belong to the next phase. See [API conventions](API_CONVENTIONS.md)
-for versioning, response and error envelopes, UTC timestamps, and logging rules.
+The API reads `DATABASE_URL` and the bootstrap script applies the initial
+Alembic migration. The health endpoint does not query tables; application data
+services are future work. See [data model](DATA_MODEL.md) for ownership and
+migration commands, and [API conventions](API_CONVENTIONS.md) for versioning,
+response and error envelopes, UTC timestamps, and logging rules.
 
 Checks:
 
@@ -33,6 +35,7 @@ Checks:
 .venv/bin/ruff format --check apps/api
 .venv/bin/mypy apps/api/src
 .venv/bin/pytest apps/api/tests
+.venv/bin/alembic -c apps/api/alembic.ini check
 npm --prefix apps/web run lint
 npm --prefix apps/web run format
 npm --prefix apps/web run typecheck

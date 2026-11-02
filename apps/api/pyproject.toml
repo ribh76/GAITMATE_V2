@@ -8,9 +8,12 @@ version = "0.1.0"
 description = "GaitMate research demo API"
 requires-python = ">=3.11"
 dependencies = [
+  "alembic>=1.15,<2",
   "fastapi>=0.115,<1",
   "pydantic>=2.10,<3",
   "pydantic-settings>=2.7,<3",
+  "psycopg[binary]>=3.2,<4",
+  "sqlalchemy>=2.0.40,<3",
   "uvicorn[standard]>=0.34,<1",
 ]
 
@@ -25,6 +28,9 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"gaitmate_api.migrations" = ["script.py.mako"]
 
 [tool.ruff]
 line-length = 100

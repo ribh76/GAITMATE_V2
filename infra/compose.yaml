@@ -21,7 +21,7 @@ services:
       context: ..
       dockerfile: apps/api/Dockerfile
     environment:
-      DATABASE_URL: postgresql://gaitmate:gaitmate_dev@db:5432/gaitmate
+      DATABASE_URL: postgresql+psycopg://gaitmate:gaitmate_dev@db:5432/gaitmate
       WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:5173}
     ports:
       - "127.0.0.1:8000:8000"

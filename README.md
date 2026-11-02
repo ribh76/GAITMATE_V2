@@ -9,7 +9,8 @@ or emergency response.
 ```mermaid
 flowchart LR
   Web[React + Vite web] --> API[FastAPI /api/v1]
-  API -. future persistence .-> DB[(Local PostgreSQL)]
+  API -. future data services .-> DB[(Local PostgreSQL)]
+  Migrations[Alembic + SQLAlchemy models] --> DB
   API --> Analytics[Python analytics]
   Fixtures[Demo CSV fixture] -. future replay .-> Analytics
 ```
@@ -22,8 +23,8 @@ prototype. There is no shared contracts package yet; the initial health schema i
 small enough to maintain directly in both apps.
 
 This foundation exposes a health endpoint and a research/demo landing page. The
-database service is configured, but application tables, migrations, sign-in, and
-patient workflows have not been implemented.
+20-table database schema and initial migration are in place. Sign-in and patient
+workflows have not been implemented.
 
 ## Start
 
@@ -51,5 +52,6 @@ PostgreSQL by default; the API container is available with `--profile api`.
 | Frontend checks and build | `npm --prefix apps/web run lint && npm --prefix apps/web run format && npm --prefix apps/web run typecheck && npm --prefix apps/web test && npm --prefix apps/web run build` |
 
 See [API conventions](docs/API_CONVENTIONS.md) for `/api/v1`, JSON responses,
-errors, UTC timestamps, and request logging.
+errors, UTC timestamps, and request logging. See [data model](docs/DATA_MODEL.md)
+for ownership, historical retention, and migrations.
 

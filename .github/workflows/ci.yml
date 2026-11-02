@@ -6,6 +6,22 @@ on:
 jobs:
   backend:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql+psycopg://gaitmate:gaitmate_dev@localhost:5432/gaitmate
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: gaitmate
+          POSTGRES_USER: gaitmate
+          POSTGRES_PASSWORD: gaitmate_dev
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U gaitmate -d gaitmate"
+          --health-interval 2s
+          --health-timeout 2s
+          --health-retries 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -17,6 +33,8 @@ jobs:
       - run: ruff check apps/api
       - run: ruff format --check apps/api
       - run: mypy apps/api/src
+      - run: alembic -c apps/api/alembic.ini upgrade head
+      - run: alembic -c apps/api/alembic.ini check
       - run: pytest apps/api/tests
       - run: python -m build --wheel apps/api
 

@@ -17,6 +17,7 @@ if ! command -v docker >/dev/null 2>&1; then
   exit 1
 fi
 docker compose -f infra/compose.yaml up -d --wait db
+.venv/bin/alembic -c apps/api/alembic.ini upgrade head
 
 echo 'Web: http://localhost:5173 | API: http://localhost:8000/api/v1/health'
 .venv/bin/uvicorn gaitmate_api.main:app --reload --host 127.0.0.1 --port 8000 &
