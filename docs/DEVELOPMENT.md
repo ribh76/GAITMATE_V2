@@ -2,9 +2,19 @@
 
 Run `./scripts/bootstrap.sh` from the repository root. It creates `.env`, installs
 Python and frontend dependencies, starts PostgreSQL in Docker, then starts the API
-and Vite. Prerequisites: Python 3.11+, Node 20.19+ or 22.12+, npm, and Docker Compose.
-Use Ctrl-C to stop both app servers; `docker compose -f infra/compose.yaml down`
-stops the database. Its named volume persists between runs.
+and Vite on the host. Prerequisites: Python 3.11+, Node 20.19+ or 22.12+, npm,
+and Docker Compose. Use Ctrl-C to stop both app servers;
+`docker compose -f infra/compose.yaml down` stops the database. Its named volume
+persists between runs. Frontend edits use Vite on the host; no container rebuild
+is needed.
+
+To run only PostgreSQL in Docker, use
+`docker compose -f infra/compose.yaml up -d --wait db`. To run PostgreSQL and a
+production-style API container instead of local Uvicorn, use
+`docker compose -f infra/compose.yaml --profile api up -d --build --wait` and run
+`npm --prefix apps/web run dev` separately. Stop the stack with
+`docker compose -f infra/compose.yaml --profile api down`. Do not run the API
+container and local Uvicorn at the same time; both use port 8000.
 
 The values in `.env.example` are development-only defaults. `.env` is ignored by Git.
 Never place real patient data, production credentials, or tokens in this repo or in
@@ -13,11 +23,8 @@ secrets through the deployment platform's secret manager. Rotate any secret that
 is accidentally committed.
 
 The API reads `DATABASE_URL`, but does not yet create tables or query the database;
-schema and migrations belong to the next phase. All API timestamps use UTC. Routes
-begin with `/api/v1`; successful responses use a `data` envelope. FastAPI's standard
-validation error format remains in use until domain error contracts are introduced.
-Python's standard logging should be used for new API modules without recording
-credentials or health-like message bodies.
+schema and migrations belong to the next phase. See [API conventions](API_CONVENTIONS.md)
+for versioning, response and error envelopes, UTC timestamps, and logging rules.
 
 Checks:
 
