@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercises | GaitMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back-link" href="index.html">← Home</a>
+          <span class="divider"></span>
+          <span class="page-title">Current Exercises</span>
+        </div>
+      </header>
+
+      <section class="container narrow">
+        <div class="row-between" style="margin-bottom:20px;">
+          <div>
+            <div class="kicker">Today</div>
+            <h1 style="margin:5px 0 0; font-size:30px;">Recovery plan</h1>
+          </div>
+          <button class="secondary-button"></button>
+        </div>
+
+        <section class="exercise-stack">
+          <div class="exercise-group exercise-row" data-exercise="ankle-abcs">
+            <article class="card exercise-card">
+              <div class="kicker">Mobility</div>
+              <h2>Ankle ABCs</h2>
+              <p class="subtle">Trace the alphabet slowly with your foot while keeping your knee still.</p>
+              <div class="set-list">
+                <button class="set-toggle" type="button" data-set="1" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 1: A-Z</span>
+                </button>
+                <button class="set-toggle" type="button" data-set="2" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 2: A-Z</span>
+                </button>
+              </div>
+            </article>
+
+            <aside class="card feedback-card">
+              <div class="kicker">Feedback</div>
+              <div class="rating-labels">
+                <span>Bad</span>
+                <span>OK</span>
+                <span>Great</span>
+              </div>
+              <div class="rating-bar" aria-label="Rate Ankle ABCs">
+                <button type="button" data-rating="1" aria-pressed="false">1</button>
+                <button type="button" data-rating="2" aria-pressed="false">2</button>
+                <button type="button" data-rating="3" aria-pressed="false">3</button>
+                <button type="button" data-rating="4" aria-pressed="false">4</button>
+                <button type="button" data-rating="5" aria-pressed="false">5</button>
+              </div>
+              <textarea class="field-control feedback-text" maxlength="300" placeholder="Describe how you felt during the exercise"></textarea>
+              <div class="char-count" data-count>0/300</div>
+            </aside>
+          </div>
+
+          <div class="exercise-group exercise-row" data-exercise="band-inversion">
+            <article class="card exercise-card">
+              <div class="kicker">Strength</div>
+              <h2>Band Inversion</h2>
+              <p class="subtle">Move your foot inward against light band resistance with slow control.</p>
+              <div class="set-list">
+                <button class="set-toggle" type="button" data-set="1" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 1: 8 repititions</span>
+                </button>
+                <button class="set-toggle" type="button" data-set="2" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 2: 8 repititions</span>
+                </button>
+              </div>
+            </article>
+
+            <aside class="card feedback-card">
+              <div class="kicker">Feedback</div>
+              <div class="rating-labels">
+                <span>Bad</span>
+                <span>OK</span>
+                <span>Great</span>
+              </div>
+              <div class="rating-bar" aria-label="Rate Band Inversion">
+                <button type="button" data-rating="1" aria-pressed="false">1</button>
+                <button type="button" data-rating="2" aria-pressed="false">2</button>
+                <button type="button" data-rating="3" aria-pressed="false">3</button>
+                <button type="button" data-rating="4" aria-pressed="false">4</button>
+                <button type="button" data-rating="5" aria-pressed="false">5</button>
+              </div>
+              <textarea class="field-control feedback-text" maxlength="300" placeholder="Describe how you felt during the exercise"></textarea>
+              <div class="char-count" data-count>0/300</div>
+            </aside>
+          </div>
+
+          <div class="exercise-group exercise-row" data-exercise="heel-raises">
+            <article class="card exercise-card">
+              <div class="kicker">Balance</div>
+              <h2>Heel Raises</h2>
+              <p class="subtle">Rise evenly through both feet, pause briefly, and lower with control.</p>
+              <div class="set-list">
+                <button class="set-toggle" type="button" data-set="1" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 1: 10 repititions</span>
+                </button>
+                <button class="set-toggle" type="button" data-set="2" aria-pressed="false">
+                  <span class="set-box" aria-hidden="true"></span>
+                  <span>Set 2: 10 repititions</span>
+                </button>
+              </div>
+            </article>
+
+            <aside class="card feedback-card">
+              <div class="kicker">Feedback</div>
+              <div class="rating-labels">
+                <span>Bad</span>
+                <span>OK</span>
+                <span>Great</span>
+              </div>
+              <div class="rating-bar" aria-label="Rate Heel Raises">
+                <button type="button" data-rating="1" aria-pressed="false">1</button>
+                <button type="button" data-rating="2" aria-pressed="false">2</button>
+                <button type="button" data-rating="3" aria-pressed="false">3</button>
+                <button type="button" data-rating="4" aria-pressed="false">4</button>
+                <button type="button" data-rating="5" aria-pressed="false">5</button>
+              </div>
+              <textarea class="field-control feedback-text" maxlength="300" placeholder="Describe how you felt during the exercise"></textarea>
+              <div class="char-count" data-count>0/300</div>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="js/exercises.js"></script>
+  </body>
+</html>

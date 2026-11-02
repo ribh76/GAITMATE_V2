@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Physician | GaitMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back-link" href="index.html">← Home</a>
+          <span class="divider"></span>
+          <span class="page-title">Contact Physician</span>
+        </div>
+      </header>
+
+      <section class="container narrow">
+        <h1 class="headline">Contact Physician</h1>
+        <p class="lede">Use this form to prepare a note for your clinician about ankle pain, swelling, strain changes, or recovery concerns.</p>
+
+        <form class="card contact-card" data-contact-form>
+          <label class="field-label" for="physician-email">To</label>
+          <input class="field-control" id="physician-email" name="to" type="email" value="clinician@example.com">
+
+          <label class="field-label" for="physician-message">Message</label>
+          <textarea class="field-control" id="physician-message" name="message" rows="7" placeholder="Describe what you are feeling or what changed..."></textarea>
+
+          <div class="contact-actions">
+            <button class="primary-button" type="submit">Send Message</button>
+            <p class="success-message" data-contact-success hidden>Message prepared for your physician.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="js/contact.js"></script>
+  </body>
+</html>

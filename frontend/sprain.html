@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sprain Tracking | GaitMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back-link" href="index.html">← Home</a>
+          <span class="divider"></span>
+          <span class="page-title">Sprain Tracking</span>
+        </div>
+        <div class="sensor-status">
+          <span class="sensor-dot"></span>
+          <span data-status>Loading sensor data</span>
+        </div>
+      </header>
+
+      <section class="container">
+        <p class="status-message" data-reading></p>
+
+        <section class="demo-controls" aria-label="Demo strain state">
+          <span class="kicker">Demo strain state</span>
+          <div class="demo-button-group">
+            <button class="demo-button" type="button" data-demo-state="healthy">Low Risk</button>
+            <button class="demo-button" type="button" data-demo-state="moderate">Moderate Risk</button>
+            <button class="demo-button" type="button" data-demo-state="highRisk">High Risk</button>
+          </div>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="card panel">
+            <div class="row-between">
+              <div>
+                <div class="kicker">Lateral ankle</div>
+                <h1 style="margin:5px 0 0; font-size:21px;">Ligament strain view</h1>
+              </div>
+            </div>
+            <div class="ankle-wrap">
+              <img src="assets/ankle-ligaments.png" alt="Lateral ankle ligaments">
+              <div data-pins></div>
+            </div>
+            <div class="legend">
+              <span><i class="swatch" style="background:#2a8a5f"></i>Low</span>
+              <span><i class="swatch" style="background:#d9a32a"></i>Moderate</span>
+              <span><i class="swatch" style="background:#d65a4a"></i>High</span>
+            </div>
+          </section>
+
+          <section class="ligament-list" data-ligaments>
+            <p class="status-message">Loading ligament metrics...</p>
+          </section>
+        </div>
+
+        <section class="card overall">
+          <div class="row-between">
+            <div>
+              <div class="kicker">Combined index</div>
+              <h2 style="margin:5px 0 0;">Overall ankle ligament strain</h2>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-family:'Newsreader',serif; font-size:40px; font-weight:600; line-height:1;" data-overall-score>--</div>
+              <span class="pill" data-overall-label>Loading</span>
+            </div>
+          </div>
+          <div class="scale">
+            <span class="scale-marker" data-scale-marker></span>
+          </div>
+          <div class="scale-labels">
+            <span>0 · Healthy</span>
+            <span>50 · Monitor</span>
+            <span>100 · See clinician</span>
+          </div>
+          <p class="note" data-overall-note>Waiting for guidance.</p>
+        </section>
+
+        <div class="center-actions">
+          <a class="primary-button" href="contact.html">Contact Physician</a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/sprain.js"></script>
+  </body>
+</html>

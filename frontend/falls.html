@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fall Tracking | GaitMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <a class="back-link" href="index.html">← Home</a>
+          <span class="divider"></span>
+          <span class="page-title">Fall Tracking</span>
+        </div>
+        <div class="sensor-status">
+          <span class="sensor-dot"></span>
+          <span>Live · sensor connected</span>
+        </div>
+      </header>
+
+      <section class="container narrow">
+        <section class="card panel row-between" style="margin-bottom:20px;">
+          <div>
+            <div class="kicker">Fall detection alerts</div>
+            <p class="subtle" data-alert-text style="margin:7px 0 0;">On: clinician and emergency contact alerts are enabled.</p>
+          </div>
+          <button class="primary-button" data-alert-toggle style="position:relative; width:52px; height:30px; padding:0; border-radius:999px;" aria-label="Toggle fall alerts">
+            <span data-alert-knob style="position:absolute; top:3px; left:3px; width:24px; height:24px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,.25); transition:transform .2s ease;"></span>
+          </button>
+        </section>
+
+        <section class="stats-grid" style="margin-bottom:20px;">
+          <article class="card stat-card">
+            <div class="kicker">Total falls logged</div>
+            <div style="font-family:'Newsreader',serif; font-size:36px; font-weight:600;">5</div>
+          </article>
+          <article class="card stat-card">
+            <div class="kicker">Last 30 days</div>
+            <div style="font-family:'Newsreader',serif; font-size:36px; font-weight:600;">3</div>
+          </article>
+          <article class="card stat-card">
+            <div class="kicker">Most recent</div>
+            <div style="font-family:'Newsreader',serif; font-size:26px; font-weight:600;">Jun 21</div>
+          </article>
+        </section>
+
+        <section class="card" style="overflow:hidden;">
+          <div class="row-between" style="padding:20px;">
+            <h1 style="margin:0; font-size:22px;">Fall history</h1>
+            <span class="pill" style="color:#2a8a5f; background:#e7f3ed;">All reviewed</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date &amp; time</th>
+                  <th>Activity</th>
+                  <th>Severity</th>
+                  <th>Ankle strain</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jun 21, 2026 · 7:42 AM</td>
+                  <td>Walking outside</td>
+                  <td><span class="pill" style="color:#e08a4a; background:#fbeede;">Moderate</span></td>
+                  <td>68</td>
+                  <td>Reviewed</td>
+                </tr>
+                <tr>
+                  <td>Jun 9, 2026 · 6:15 PM</td>
+                  <td>Kitchen step</td>
+                  <td><span class="pill" style="color:#d9a32a; background:#faf1dc;">Minor</span></td>
+                  <td>38</td>
+                  <td>Reviewed</td>
+                </tr>
+                <tr>
+                  <td>May 28, 2026 · 9:03 PM</td>
+                  <td>Stairs</td>
+                  <td><span class="pill" style="color:#d65a4a; background:#fbe8e4;">Severe</span></td>
+                  <td>90</td>
+                  <td>Reported</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="js/falls.js"></script>
+  </body>
+</html>

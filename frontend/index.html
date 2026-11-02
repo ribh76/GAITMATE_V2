@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GaitMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">G</span>
+          <span class="brand-name">GaitMate</span>
+        </div>
+        <div class="sensor-status">
+          <span class="sensor-dot"></span>
+          <span data-health-status>Checking sensor connection</span>
+        </div>
+      </header>
+
+      <section class="container narrow">
+        <h1 class="headline">Welcome to GaitMate</h1>
+        <p class="lede">Developing wearable biosensing technology and real-time feedback tools for smarter injury recovery.</p>
+
+        <div class="tile-grid">
+          <a class="card tile" href="sprain.html">
+            <div class="tile-media">
+              <img src="assets/ankle-ligaments.png" alt="Ankle ligament diagram">
+            </div>
+            <div class="tile-title-row">
+              <div>
+                <strong>Track Sprain</strong>
+                <div class="subtle" style="font-size:13px;">Ligament strain</div>
+              </div>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <a class="card tile" href="exercises.html">
+            <div class="tile-media">
+              <img src="assets/ankle-exercise.png" alt="Ankle exercise illustration">
+            </div>
+            <div class="tile-title-row">
+              <div>
+                <strong>Current Exercises</strong>
+                <div class="subtle" style="font-size:13px;">3 for today</div>
+              </div>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <a class="card tile" href="falls.html">
+            <div class="tile-media">
+              <img src="assets/ankle-failed.png" alt="Fall tracking illustration">
+            </div>
+            <div class="tile-title-row">
+              <div>
+                <strong>Fall Tracking</strong>
+                <div class="subtle" style="font-size:13px;">No recent falls</div>
+              </div>
+              <span aria-hidden="true">→</span>
+            </div>
+          </a>
+        </div>
+
+        <section class="monitoring-graph-card" aria-label="Monitoring graph preview">
+          <img src="assets/monitoring_graph.png" alt="GaitMate monitoring graph">
+          <div class="graph-summary">
+            <h2>Recovery History</h2>
+            <p>Updated 60 seconds ago.</p>
+          </div>
+        </section>
+
+        <section class="linkedin-card">
+          <div>
+            <div class="kicker">Company updates</div>
+            <h2>Follow GaitMate on LinkedIn</h2>
+          </div>
+          <a class="secondary-button" href="https://www.linkedin.com/company/gaitmate/posts/?feedView=all" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
+        </section>
+
+        <div class="center-actions">
+          <a class="primary-button" href="contact.html">Contact Physician</a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
