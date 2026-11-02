@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: gaitmate
+      POSTGRES_USER: gaitmate
+      POSTGRES_PASSWORD: gaitmate_dev
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - gaitmate_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gaitmate -d gaitmate"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+
+volumes:
+  gaitmate_pgdata:
+

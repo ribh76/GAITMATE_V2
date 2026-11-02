@@ -52,16 +52,16 @@ Build a two-sided rehabilitation platform connecting ankle biomechanics monitori
 
 ### PHASE 0: Audit the prototype and freeze the scope — FOUNDATION
 
-1. Inventory the existing Flask routes, services, CSV loader, risk calculations, HTML pages, JavaScript behaviors, assets, and sample recordings.
-2. Identify reusable domain concepts (ATFL/CFL/PTFL, strain-related metrics, exercise catalog, threshold events) separately from legacy implementations.
-3. Document the original CSV schema: columns, timestamps, units, sample rate (if known), missing values, and provenance; **do not assume measurements are clinically valid ligament strain**.
+1. Inventory the existing Flask routes, services, CSV loader, risk calculations, HTML pages, JavaScript behaviors, assets, and sample recordings.-
+2. Identify reusable domain concepts (ATFL/CFL/PTFL, strain-related metrics, exercise catalog, threshold events) separately from legacy implementations.-
+3. Document the original CSV schema: columns, timestamps, units, sample rate (if known), missing values, and provenance; **do not assume measurements are clinically valid ligament strain**.-
 4. Establish the primary user journeys for patient and physician, including plan assignment, exercise feedback, messaging, alert review, and plan revision.
-5. Write the explicit v1 feature matrix, ship-later list, and exclusions from the locked decisions above.
-6. Create low-fidelity route maps and screen inventories for both roles; define navigation, shared design language, and accessibility expectations.
-7. Specify the canonical domain vocabulary: user, relationship, profile, recording session, reading, metric, baseline, threshold policy, event, plan, plan version, exercise, completion, conversation, notification, and audit event.
-8. Record product assumptions, unknown sensor semantics, medical-safety disclaimers, and unresolved decisions in an ADR/decision log.
-9. Define the featured demo patient's fictional history and the exact end-to-end storyline; avoid designing for an unnecessary multi-patient demo population.
-10. Produce a traceability matrix mapping every must-ship feature to a phase, endpoint, screen, and acceptance test.
+5. Write the explicit v1 feature matrix, ship-later list, and exclusions from the locked decisions above.-
+6. Create low-fidelity route maps and screen inventories for both roles; define navigation, shared design language, and accessibility expectations.-
+7. Specify the canonical domain vocabulary: user, relationship, profile, recording session, reading, metric, baseline, threshold policy, event, plan, plan version, exercise, completion, conversation, notification, and audit event.-
+8. Record product assumptions, unknown sensor semantics, medical-safety disclaimers, and unresolved decisions in an ADR/decision log.-
+9. Define the featured demo patient's fictional history and the exact end-to-end storyline; avoid designing for an unnecessary multi-patient demo population.-
+10. Produce a traceability matrix mapping every must-ship feature to a phase, endpoint, screen, and acceptance test.-
 
 **Acceptance gate:** Every locked feature has an owner in the roadmap; the sample recording has a documented schema and limitations; the two-role workflow can be narrated from beginning to end without imaginary functionality.
 
